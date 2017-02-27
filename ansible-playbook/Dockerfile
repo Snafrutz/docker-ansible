@@ -8,6 +8,7 @@ RUN apk add --update --no-cache openssh-client ansible && \
     pip install --upgrade pyvmomi && \
     pip install --upgrade ec2 && \
     pip install --upgrade awscli && \
+    pip install --upgrade dopy && \
     export PATH=~/.local/bin:$PATH
 
 ENV PATH /root/.local/bin:$PATH
