@@ -1,6 +1,6 @@
 FROM alpine:latest 
 MAINTAINER snafrutz <piermarco.zerbini@gmail.com> 
-RUN apk add --update --no-cache openssh-client ansible && \
+RUN apk add --update --no-cache openssh-client ansible git && \
     python -m ensurepip && \
     pip install --upgrade pip && \
     pip install --upgrade boto3 && \
