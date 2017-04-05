@@ -1,9 +1,11 @@
 FROM alpine:latest 
 MAINTAINER snafrutz <piermarco.zerbini@gmail.com> 
-RUN apk add --update --no-cache openssh-client ansible && \
+RUN apk add --update --no-cache gcc openssh-client ansible && \
     python -m ensurepip && \
     pip install --upgrade pip && \
+    pip install --upgrade setuptools && \
     pip install --upgrade Jinja2 && \
+    pip install --upgrade ansible-lint && \
     export PATH=~/.local/bin:$PATH
 
 ENV PATH /root/.local/bin:$PATH
