@@ -1,5 +1,5 @@
-FROM alpine:latest 
-MAINTAINER snafrutz <piermarco.zerbini@gmail.com> 
+FROM alpine:latest
+MAINTAINER snafrutz <piermarco.zerbini@gmail.com>
 RUN apk add --update --no-cache openssh-client ansible git rsync && \
     python -m ensurepip && \
     pip install --upgrade pip && \
@@ -9,6 +9,7 @@ RUN apk add --update --no-cache openssh-client ansible git rsync && \
     pip install --upgrade ec2 && \
     pip install --upgrade awscli && \
     pip install --upgrade dopy && \
+    pip install --upgrade docker-py && \
     export PATH=~/.local/bin:$PATH
 
 ENV PATH /root/.local/bin:$PATH
