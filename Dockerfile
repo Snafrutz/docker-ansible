@@ -7,7 +7,7 @@ RUN apk add --update --no-cache --virtual build-dependencies \
     rm -r /usr/lib/python*/ensurepip && \
     pip3 install --upgrade cffi && \
     pip3 install --upgrade ansible Jinja2 ansible-lint && \
-    pip3 install --upgrade awscli boto3 ec2 && \
+    pip3 install --upgrade awscli boto3 boto ec2 && \
     pip3 install --upgrade pyvmomi pysphere && \
     pip3 install --upgrade dopy && \
     pip3 install --upgrade docker-py && \
